@@ -1,7 +1,7 @@
 {
   "name": "fruitstore_react_lib",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "libreria react para fruiTStore",
   "author": "sergiozz",
   "license": "MIT",
   "repository": "sergiozz/fruitstore_react_lib",
