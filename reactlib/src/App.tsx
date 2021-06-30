@@ -2,7 +2,7 @@ import { ReactLibComponent } from 'fruitstore_react_lib'
 import 'fruitstore_react_lib/dist/index.css'
 
 const App = () => {
-  return <ReactLibComponent text="Creado Reactlib 😄 !!!" state />
+  return <ReactLibComponent text="Creado Reactlib 😄 !!!" />
 }
 
 export default App

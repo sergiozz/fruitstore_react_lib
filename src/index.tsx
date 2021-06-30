@@ -1,22 +1,24 @@
-import * as React from 'react'
+import React,  {FunctionComponent, useState} from 'react'
 import styles from './styles.module.css'
 
 interface Props {
-  text: string,
-  state: true
+  text: string
 }
 
-function handleClick(state :boolean) {
-  console.log("se presiono el boton", state)
-}
+export const ReactLibComponent: FunctionComponent<Props> = (props:Props) => {
 
-export const ReactLibComponent = ({ text, state }: Props) => {
-  return <div className={styles.test}>ReactLib Component: {text}
+  const [isPressed, setIsPressed] = useState<boolean>(false);
+  console.log("state: ",isPressed)
+  
+  return (
+    <div className={styles.test}>ReactLib Component: {props.text}
       
       <br/>  
-      <button onClick={() =>handleClick(state)}>
-        {state ? 'ON' : 'OFF'}
+      <button onClick={()=>setIsPressed(!isPressed)}>
+        {isPressed ? "true" : "false"}
       </button>
   
   </div>
+  )
+
 }
