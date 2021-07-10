@@ -1,5 +1,5 @@
 import React,  {FunctionComponent, useState} from 'react'
-import styles from './styles.module.css'
+import {Cuerpo, Titulo, Precio, Descripcion } from './styles.module'
 
 interface Props {
   producto: string
@@ -8,20 +8,17 @@ interface Props {
 }
 
 export const ReactLibComponent: FunctionComponent<Props> = (props:Props) => {
+  const {precio, producto, text } = props;
 
   const [isPressed, setIsPressed] = useState<boolean>(false);
-  console.log("state: ",isPressed)
   
   return (
-    <div className={styles.cuerpo}>
-      <div className={styles.titulo}> {props.producto} </div>
-      <div className={styles.precio}> ${props.precio} </div>
-      <button onClick={()=>setIsPressed(!isPressed)}>
-        {isPressed ? "Pedido ✔" : "Pedir un Kg"}
-      </button>
+    <Cuerpo isPressed={isPressed} onClick={()=>setIsPressed(!isPressed)}>
+      <Titulo> {producto} </Titulo>
+      <Precio> ${precio} </Precio>     
       <br/> 
-      <div className={styles.descripcion}> {props.text} </div>
-  </div>
+      <Descripcion> {text} </Descripcion>
+  </Cuerpo>
   )
 
 }
