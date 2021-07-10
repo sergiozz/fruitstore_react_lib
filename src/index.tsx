@@ -20,5 +20,6 @@ export const ReactLibComponent: FunctionComponent<Props> = (props:Props) => {
       <Descripcion> {text} </Descripcion>
   </Cuerpo>
   )
-
 }
+
+export default ReactLibComponent;
