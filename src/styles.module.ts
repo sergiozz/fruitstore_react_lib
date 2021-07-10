@@ -10,7 +10,7 @@ export const Cuerpo = styled.div`
   color: ${({isPressed}:{isPressed: boolean}) => 
     isPressed ? 'green' : 'blue'
   };
-  width: 10%;
+  width: 75%;
 `;
 
 export const Titulo = styled.div`

@@ -9,16 +9,9 @@ npm install --save fruitstore_react_lib
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import ReactLibComponent from 'fruitstore_react_lib'
 
-import MyComponent from 'fruitstore_react_lib'
-import 'fruitstore_react_lib/dist/index.css'
-
-class Reactlib extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+<ReactLibComponent text='esta es una descripcion' precio='23.3' producto='nombre del producto' />
 ```
 
 ## License
